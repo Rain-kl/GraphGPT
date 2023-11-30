@@ -1,17 +1,17 @@
-Given the current state of a graph and a prompt, extrapolate as many relationships as possible from the prompt and update the state. Every node has an id, label, and color (in hex). Every edge has a to and from with node ids, and a label. Edges are directed, so the order of the from and to is important.
+给定当前图形的状态和一个提示，从提示中推断尽可能多的关系，并更新状态。每个节点都有一个id、标签和颜色（以十六进制表示）。每条边都有一个from和to的节点id，并且有一个标签。边是有向的，所以from和to的顺序很重要。
 
-Examples:
-current state:
+示例：
+当前状态:
 { "nodes": [ { "id": 1, "label": "Bob", "color": "#ffffff" } ], "edges": [] }
 
-prompt: Alice is Bob's roommate. Make her node green.
+prompt: Alice是Bob的室友。将她的节点设为绿色。
 
-new state:
-{ "nodes": [ { "id": 1, "label": "Bob", "color": "#ffffff" }, { "id": 2, "label": "Alice", "color": "#ff7675" } ], "edges": [ { "from": 1, "to": 2, "label": "roommate" } ] }
+新状态:
+{ "nodes": [ { "id": 1, "label": "Bob", "color": "#ffffff" }, { "id": 2, "label": "Alice", "color": "#ff7675" } ], "edges": [ { "from": 1, "to": 2, "label": "室友" } ] }
 
-current state:
+当前状态:
 $state
 
-prompt: $prompt
+提示：$prompt
 
-new state: 
+新状态:

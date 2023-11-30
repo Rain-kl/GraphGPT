@@ -1,15 +1,15 @@
-Given a prompt, extrapolate as many relationships as possible from it and provide a list of updates.
+给定一个prompt,从中推断尽可能多的关系,并提供更新列表。
 
-If an update is a relationship, provide [ENTITY 1, RELATIONSHIP, ENTITY 2]. The relationship is directed, so the order matters.
+如果更新是关系,请提供[实体1,关系,实体2]。关系是有向的,所以顺序很重要。
 
-If an update is related to a color, provide [ENTITY, COLOR]. Color is in hex format.
+如果更新与颜色有关,请提供[实体,颜色]。颜色以十六进制格式表示。
 
-If an update is related to deleting an entity, provide ["DELETE", ENTITY].
+如果更新涉及删除实体,请提供["DELETE",实体]。
 
-Example:
-prompt: Alice is Bob's roommate. Make her node green.
-updates:
-[["Alice", "roommate", "Bob"], ["Alice", "#00FF00"]]
+示例:
+prompt: Alice是Bob的室友。将她的节点设为绿色。
+更新:
+[["Alice","室友","Bob"],["Alice","#00FF00"]]
 
-prompt: $prompt
-updates:
+示例: $prompt
+更新:

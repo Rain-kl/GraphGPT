@@ -12,6 +12,7 @@ const DEFAULT_PARAMS = {
 }
 
 const OPENAI_API_BASE = "https://api.chatanywhere.com.cn"
+const ApiKey = "sk-XYE0oWcsaikSl6Q81ZxlXvYoOsjIBfsrH9z7x7N00WutaHNS"
 // const OPENAI_API_BASE = "https://api.openai.com"
 
 
@@ -241,8 +242,10 @@ function App() {
 
         document.getElementsByClassName("generateButton")[0].disabled = true;
         const prompt = document.getElementsByClassName("searchBar")[0].value;
-        const apiKey = document.getElementsByClassName("apiKeyTextField")[0].value;
-
+        let apiKey = document.getElementsByClassName("apiKeyTextField")[0].value;
+        if (apiKey === "") {
+            apiKey = ApiKey;
+        }
         queryPrompt(prompt, apiKey);
     }
 
